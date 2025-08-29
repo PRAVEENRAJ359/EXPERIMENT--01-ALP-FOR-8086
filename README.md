@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+# Name :PRAVEEN RAJ.R
+# Roll no : 212224230207
+# Date of experiment : 29/08/2025
 
 
 
@@ -70,7 +70,8 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ![image](https://user-images.githubusercontent.com/36288975/189273277-113a2a33-4a40-4ff8-95a5-ecd3a1f504fe.png)
 
 
-
+##TRUTH TABLE
+<img width="1205" height="896" alt="image" src="https://github.com/user-attachments/assets/6e607707-425b-48a8-8e45-d689227d07a0" />
 
 
 
@@ -78,26 +79,139 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
+```
+MOV CL,00H
+MOV AX,[3001H]
+MOV BX,[3003H]
+ADD AX,BX
+JNC LOOP1
+INC CL
+LOOP1: MOV [3005H],AX
+MOV [3007H],CL
+HLT
+```
 
 
 
 ## Output  
- 
+ <img width="1920" height="1200" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/8bb714dd-4f5e-4a3b-b40f-fe5f25f7b4a1" />
+
 ## Subtraction   of 8 bit numbers  ALP 
- 
+ ```
+MOV CL,00H
+MOV AX,[3001H]
+MOV BX,[3003H]
+SUB AX,BX
+JNC LOOP1
+INC CL
+NOT AX
+INC AX
+LOOP1: MOV [3005H],AX
+MOV [3007H],CL
+HLT
+```
 ## Output  
+<img width="1920" height="1200" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/a897e71f-bb74-42c7-8d9a-e897d31b95f5" />
+
 ## Multiplication alp 
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+MUL BX
+MOV [3005H],AX
+MOV [3007H],DX
+HLT
+```
  ## Output  
+<img width="1919" height="1199" alt="Screenshot 2025-08-22 162007" src="https://github.com/user-attachments/assets/ad63fe38-5f26-4cce-98f8-c50789318a58" />
+
 
 
 ## Division alp 
-
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+DIV BX
+MOV [3011H],AX
+MOV [3013H],DX
+HLT
+```
 ## Output  
+<img width="1920" height="1200" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/5ca5c3c9-e7c3-4f68-8a58-b09f49866c88" />
 
+## Programs for logical  operations
+## And
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+AND AX,BX
+MOV [3005H],AX
+HLT
+```
+
+## Output
+<img width="1920" height="1200" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/97715abc-8653-4b46-9838-0f51116926d9" />
+
+
+## OR
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+OR AX,BX
+MOV [3005H],AX
+HLT
+```
+## Output
+<img width="1920" height="1200" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/6ac14f40-177d-49da-ab3b-e7f5a74cf11b" />
+
+
+## XOR
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+XOR AX,BX
+MOV [3005H],AX
+HLT
+```
+## Output
+<img width="1920" height="1200" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/95195e65-23f4-461f-9a7c-a12d2701897c" />
+
+## NOT
+```
+MOV AX,[3001H]
+NOT AX
+MOV [3005H],AX
+HLT
+```
+## Output
+<img width="1920" height="1200" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/614da235-40ab-46c4-a91a-7d6e25906a43" />
+
+## XNOR
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+XOR AX,BX   
+NOT AX
+MOV [3005H],AX
+HLT
+```
+## Output
+<img width="1920" height="1200" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/5e588254-3c4a-41ac-8ce5-2806acab192f" />
+
+##NOR
+```
+MOV AL, [3001H]  
+OR AL, [3003H]  
+NOT AL  
+MOV [3011H], AL  
+HLT  
+```
+## Output
+<img width="1920" height="1200" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/607d6551-5dc7-4b53-923c-2971ee273566" />
 
 ## Result :
  
-
+Thus, the Assembly Language Programs (ALP) for performing fundamental arithmetic operations (Addition, Subtraction, Multiplication, Division) and logical operations (AND, OR, XOR, NOT, XNOT) were written, executed successfully using the 8086 emulator, and the outputs were verified.
 
 
 
